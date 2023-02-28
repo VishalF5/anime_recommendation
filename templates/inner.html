@@ -116,10 +116,9 @@
             <div class="movies-slide carousel-nav-center owl-carousel">
                 <!-- MOVIE ITEM -->
                 <form method = "POST">
-                <a  type="submit" class="movie-item" id=anime onclick="card" href="{{ url_for('anime_info', anime_name=name1) }}">
+                <a  type="submit" class="movie-item" id=anime onclick="card" href="{{ url_for('recommends', anime_name=name1) }}">
                     <img src={{img1}} >
                     <div class="movie-item-content">
-
                         <div class="movie-item-title" id="namet" >
                             {{name1}}
                         </div>
@@ -146,7 +145,7 @@
 
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a  class="movie-item" href="{{ url_for('anime_info', anime_name=name2) }}">
+                <a  class="movie-item" href="{{ url_for('recommends', anime_name=name2) }}">
                     <img src={{img2}} alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
@@ -172,7 +171,7 @@
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a   class="movie-item"  method="POST" href="{{ url_for('anime_info', anime_name=name3) }}">
+                <a   class="movie-item"  method="POST" href="{{ url_for('recommends', anime_name=name3) }}">
                     <img src={{img3}} alt="">
                     <div class="movie-item-content">
                         <div  class="movie-item-title" >
@@ -198,7 +197,7 @@
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a  class="movie-item" href="{{ url_for('anime_info', anime_name=name4) }}">
+                <a  class="movie-item" href="{{ url_for('recommends', anime_name=name4) }}">
                     <img src={{img4}} alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title" >
@@ -224,7 +223,7 @@
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a  class="movie-item" href="{{ url_for('anime_info', anime_name=name5) }}">
+                <a  class="movie-item" href="{{ url_for('recommends', anime_name=name5) }}">
                     <img src={{img5}} alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
