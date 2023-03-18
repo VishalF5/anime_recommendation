@@ -1,0 +1,1052 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Flix
+    </title>
+    
+  <!-- New -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/css/autoComplete.min.css">
+<!--    main-->
+   <link href="{{ url_for('static', filename='css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- APP CSS -->
+    <link href="{{ url_for('static', filename='css/app_django.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/grid_django.css') }}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript">
+    var Anime = {{suggestions|tojson}};
+  </script>
+
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <div class="nav-wrapper">
+        <div class="container">
+            <div class="nav">
+                <a  class="logo">
+                    <i class='bx bx-movie-play bx-tada main-color'></i>Ota<span class="main-color">k</span>U
+                </a>
+                <div class="float-container">
+                    <form method = "POST" action = "/recommends">
+                        <div class="form-group shadow-textarea" style="width:800px;text-align: center;color: white;position: fixed;">
+                            <input type="text" name="movie" class="movie form-control" id="autoComplete" autocomplete="off" placeholder="Enter the Anime Name" style="background-color: #ffffff;border-color:#ffffff;width: 60%;color: #181818" required="required" />
+                            <br>
+                        </div>
+
+                     <div class="float-child2">
+                        <div class="form-group" style="text-align: center;">
+                            <button class="btn btn-primary btn-block movie-button" style="background-color: #e50914;text-align: center;border-color: #e50914;width:120px;height:35px;"  >Search</button><br><br>
+                        </div>
+                     </div>
+
+                </form>
+                </div>
+                <!-- MOBILE MENU TOGGLE -->
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <div class="hamburger"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END NAV -->
+
+    <!-- HERO SECTION -->
+    <div class="hero-section">
+        <!-- HERO SLIDE -->
+        <div class="hero-slide">
+            <div class="owl-carousel carousel-nav-center" id="hero-carousel">
+                <!-- SLIDE ITEM -->
+                <div class="hero-slide-item">
+                    <img src='https://i.pinimg.com/originals/1b/c1/ce/1bc1cea18ed672c5a0038ea7c6a9072c.jpg' alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                {{name1}}
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>{{score1}}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>{{dur1}}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>{{stud1}}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>{{rat1}}</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                
+                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Watch now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END SLIDE ITEM -->
+                <!-- SLIDE ITEM -->
+                <div class="hero-slide-item">
+                    <img src='https://wallpaperaccess.com/full/1266707.png' alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                {{name2}}
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>{{score2}}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>{{dur2}}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>{{stud2}}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>{{rat2}}</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                               
+                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Watch now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END SLIDE ITEM -->
+                <!-- SLIDE ITEM -->
+                <div class="hero-slide-item">
+                    <img src='https://i.pinimg.com/originals/13/a1/01/13a10172127bbf9da50b8ce6db35eeaa.png' alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                {{name3}}
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>{{score3}}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>{{dur3}}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>{{stud3}}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>{{rat3}}</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                
+                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Watch now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END SLIDE ITEM -->
+            </div>
+        </div>
+        <!-- END HERO SLIDE -->
+        <!-- TOP MOVIES SLIDE -->
+        <div class="top-movies-slide">
+            <div class="owl-carousel" id="top-movies-slide">
+                <!-- MOVIE ITEM -->
+                <form method = "POST" action = "/anime",value='Click'>
+                   
+                <div class="movie-item", value='Click' >
+                    <img src="https://m.media-amazon.com/images/M/MV5BZjNmZDhkN2QtNDYyZC00YzJmLTg0ODUtN2FjNjhhMzE3ZmUxXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_FMjpg_UX1000_.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title",name="movie" ,method='get', action='/anime'>
+                            HUNNTER x HUnter
+                        </div>
+                    
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score4}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur4}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud4}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat4}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="https://s.yimg.com/ny/api/res/1.2/Tj9jWYcFwkNKDRmhUscnpw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTkwNQ--/https://s.yimg.com/os/creatr-uploaded-images/2021-09/adcad830-202a-11ec-bbf6-2fd2014631e0" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name5}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score5}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur5}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud5}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat5}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="https://flxt.tmsimg.com/assets/p186544_b_v8_ad.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name6}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score6}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur6}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud6}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat6}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="https://wallpapercave.com/wp/wp4585083.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name7}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score7}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur7}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud7}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat7}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZmE1NjIyNjYtMTVmMy00M2YyLTljMjMtZGQwYmUxOTU4NjRlXkEyXkFqcGdeQXVyNjc3OTE4Nzk@._V1_.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                           {{name8}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score8}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur8}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud8}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat8}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_FMjpg_UX1000_.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name9}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score9}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur9}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud9}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat9}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+            </div>
+        </div>
+        <!-- END TOP MOVIES SLIDE -->
+    </div>
+    <!-- END HERO SECTION -->
+
+    <!-- LATEST MOVIES SECTION -->
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                Biggest fanbase
+            </div>
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src='https://m.media-amazon.com/images/M/MV5BODkzMjhjYTQtYmQyOS00NmZlLTg3Y2UtYjkzN2JkNmRjY2FhXkEyXkFqcGdeQXVyNTM4MDQ5MDc@._V1_FMjpg_UX1000_.jpg' alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name66}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score66}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur66}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud66}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat66}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src='https://animesonehd.xyz/wp-content/uploads/2020/02/jojo1.jpg' alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name388}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score388}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur388}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud388}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat388}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src='https://m.media-amazon.com/images/M/MV5BYjY4MDU2YjMtNzY1MC00ODg1LWIwMzYtMWE5YTA3YTI4ZjMxXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg' alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name2927}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score2927}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur2927}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud2927}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat26927}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src='https://cdn.europosters.eu/image/750/posters/one-punch-man-destruction-i61133.jpg' alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name101}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score101}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur101}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud101}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat101}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src='https://m.media-amazon.com/images/M/MV5BNmQzYmE2MGEtZjk4YS00YmVjLWEwZWMtODRkMjc4MTM5N2I3XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg' alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name598}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score598}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur598}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud598}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat598}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src='https://images-na.ssl-images-amazon.com/images/I/81mJp8ObCNL.jpg'alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name877}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score877}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur877}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud877}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat877}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src='https://m.media-amazon.com/images/M/MV5BMjUxMzE4ZDctODNjMS00MzIwLThjNDktODkwYjc5YWU0MDc0XkEyXkFqcGdeQXVyNjc3OTE4Nzk@._V1_FMjpg_UX1000_.jpg' alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name22}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score22}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur22}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud22}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat22}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+            </div>
+        </div>
+    </div>
+    <!-- END LATEST MOVIES SECTION -->
+
+    <!-- LATEST SERIES SECTION -->
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                Movies
+            </div>
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src='https://m.media-amazon.com/images/M/MV5BZGRkOGMxYTUtZTBhYS00NzI3LWEzMDQtOWRhMmNjNjJjMzM4XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg' alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name14}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score14}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur14}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud14}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat14}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src='https://m.media-amazon.com/images/M/MV5BODRmZDVmNzUtZDA4ZC00NjhkLWI2M2UtN2M0ZDIzNDcxYThjL2ltYWdlXkEyXkFqcGdeQXVyNTk0MzMzODA@._V1_FMjpg_UX1000_.jpg' alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                           {{name23}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score23}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur23}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud23}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud23}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src='https://m.media-amazon.com/images/M/MV5BOTg5ZjI5ZTAtOWE2OS00MjY4LWI4ZDQtMzEzMDY4MTgzYWJlXkEyXkFqcGdeQXVyNjc3OTE4Nzk@._V1_.jpg' alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name26}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score26}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur26}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud26}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat26}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src='https://images-na.ssl-images-amazon.com/images/I/91Oojh0EQSS._RI_.jpg' alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name31}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score31}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur31}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud31}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat31}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src='https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_360,c_scale/jackets/9781838719517.jpg' alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name39}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score39}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur39}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud39}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat39}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src='https://m.media-amazon.com/images/M/MV5BNmM4YTFmMmItMGE3Yy00MmRkLTlmZGEtMzZlOTQzYjk3MzA2XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg' alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name48}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score48}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur48}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud48}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat48}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src='https://akibamarket.com/wp-content/uploads/2020/06/tenki.jpg'alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                           {{name209}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score209}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur209}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud209}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat209}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+            </div>
+        </div>
+    </div>
+    <!-- END LATEST SERIES SECTION -->
+
+    <!-- LATEST CARTOONS SECTION -->
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                Epic
+            </div>
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="https://wallpapercave.com/wp/wp8936520.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name1076}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score1076}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur1076}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud1076}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat1076}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="https://i.pinimg.com/originals/79/4f/c6/794fc659b025e44256077d2751fe0cdd.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name67}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score67}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur67}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud67}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat67}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="https://i.pinimg.com/originals/83/57/3b/83573b44349c706e933f32672cc65a9a.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name787}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score787}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur787}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud787}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat787}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNTAzYTlkMWEtOTNjZC00ZDU0LWI5ODUtYTRmYzY0MTAzYWZlXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_FMjpg_UX1000_.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name448}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score448}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur448}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud448}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat448}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="https://www.themoviedb.org/t/p/original/vRh0o4eq5kAFDgc95u1HTcJNuAw.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name284}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score284}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur284}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud284}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat284}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMGMyOThiMGUtYmFmZi00YWM0LWJiM2QtZGMwM2Q2ODE4MzhhXkEyXkFqcGdeQXVyMjc2Nzg5OTQ@._V1_.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name371}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score371}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur371}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud371}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat371}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BY2IyMDA0NGEtZjIyOS00NjU0LThlOTctODA0OTZmMDU2ZTMxXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name926}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score926}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur926}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud926}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat926}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+            </div>
+        </div>
+    </div>
+    <!-- END LATEST CARTOONS SECTION -->
+
+    <!-- SPECIAL MOVIE SECTION -->
+    <div class="section">
+        <div class="hero-slide-item">
+            <img src='https://giffiles.alphacoders.com/351/35157.gif' alt="">
+            <div class="overlay"></div>
+            <div class="hero-slide-item-content">
+                <div class="item-content-wraper">
+                    <div class="item-content-title">
+                        {{name614}}
+                    </div>
+                    <div class="movie-infos">
+                        <div class="movie-info">
+                            <i class="bx bxs-star"></i>
+                            <span>{{score614}}</span>
+                        </div>
+                        <div class="movie-info">
+                            <i class="bx bxs-time"></i>
+                            <span>{{dur614}}</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>{{stud614}}</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>{{rat614}}</span>
+                        </div>
+                    </div>
+                    <div class="item-content-description">
+                        
+                    </div>
+                    <div class="item-action">
+                        <a href="#" class="btn btn-hover">
+                            <i class="bx bxs-right-arrow"></i>
+                            <span>Watch now</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END SPECIAL MOVIE SECTION -->
+
+    <!-- FOOTER SECTION -->
+    <footer class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-md-6 col-sm-12">
+                    <div class="content">
+                        <a href="#" class="logo">
+                            <i class='bx bx-movie-play bx-tada main-color'></i>Ota<span class="main-color">k</span>U
+                        </a>
+                        <p>
+                            For Anime Lovers From Anime Lovers.
+                        </p>
+                        <div class="social-list">
+                            <a href="#" class="social-item">
+                                <i class="bx bxl-github"></i>
+                            </a>
+                            <a href="#" class="social-item">
+                                <i class="bx bxl-github"></i>
+                            </a>
+                            <a href="#" class="social-item2">
+                                <i class="fab fa-kaggle"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-3 col-md-6 col-sm-6">
+                            <div class="content">
+                                <p><b>Flix</b></p>
+                                <ul class="footer-menu">
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">My profile</a></li>
+                                    <li><a href="#">Pricing plans</a></li>
+                                    <li><a href="#">Contacts</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-6 col-sm-6">
+                            <div class="content">
+                                <p><b>Browse</b></p>
+                                <ul class="footer-menu">
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">My profile</a></li>
+                                    <li><a href="#">Pricing plans</a></li>
+                                    <li><a href="#">Contacts</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER SECTION -->
+
+    <!-- COPYRIGHT SECTION -->
+    
+
+    <!-- New -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- OWL CAROUSEL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <!-- APP SCRIPT -->
+    <script src="{{ url_for('static', filename='js/appnew_django.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/autocomplete.js')}}"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Otaku
+    </title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/css/autoComplete.min.css">
+<!--    main-->
+   <link href="{{ url_for('static', filename='css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- APP CSS -->
+    <link href="{{ url_for('static', filename='css/grid.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/app1.css') }}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript">
+    var Anime = {{suggestions|tojson}};
+  </script>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <div class="nav-wrapper">
+        <div class="container">
+            <div class="nav">
+                <a href="#" class="logo">
+                    <i class='bx bx-movie-play bx-tada main-color'></i>Ota<span class="main-color">k</span>U
+                </a>
+                <div class="float-container">
+                    <form method = "POST" action = "/recommends">
+                        <div class="form-group shadow-textarea" style="width:800px;text-align: center;color: white;position: fixed;">
+                            <input type="text" name="movie" class="movie form-control" id="autoComplete" autocomplete="off" placeholder="Enter the Anime Name" style="background-color: #ffffff;border-color:#ffffff;width: 60%;color: #181818" required="required" />
+                            <br>
+                        </div>
+
+                     <div class="float-child2">
+                        <div class="form-group" style="text-align: center;">
+                            <button class="btn btn-primary btn-block movie-button" style="background-color: #e50914;text-align: center;border-color: #e50914;width:120px;height:35px;"  >Search</button><br><br>
+                        </div>
+                     </div>
+
+                </form>
+                </div>
+
+                <!-- MOBILE MENU TOGGLE -->
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <div class="hamburger"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END NAV -->
+
+    <!-- HERO SECTION -->
+    <div class="hero-section">
+        <!-- HERO SLIDE -->
+        <div class="hero-slide">
+            <div class="owl-carousel carousel-nav-center" id="hero-carousel">
+                <div class="hero-slide-item"
+                style="background-image: linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url({{img}});background-size:cover">
+                    <img src={{img}}  alt="">
+
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                {{name}}
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>{{score}}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>{{dur}}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>{{stud}}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>{{rat}}</span>
+                                </div>
+
+                                <div class="movie-info">
+                                    <span><br>{{syn}}</span>
+                                </div>
+                            </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- LATEST SERIES SECTION -->
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                SIMILAR ANIME
+            </div>
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!-- MOVIE ITEM -->
+                <form method = "POST">
+                <a  type="submit" class="movie-item" id=anime onclick="card" href="{{ url_for('anime_info', anime_name=name1) }}">
+                    <img src={{img1}} >
+                    <div class="movie-item-content">
+                        <div class="movie-item-title" id="namet" >
+                            {{name1}}
+                        </div>
+
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score1}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur1}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud1}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat1}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </form>
+
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a  class="movie-item" href="{{ url_for('anime_info', anime_name=name2) }}">
+                    <img src={{img2}} alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                           {{name2}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score2}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur2}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud2}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud2}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a   class="movie-item"  method="POST" href="{{ url_for('anime_info', anime_name=name3) }}">
+                    <img src={{img3}} alt="">
+                    <div class="movie-item-content">
+                        <div  class="movie-item-title" >
+                            {{name3}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score3}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur3}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud3}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat3}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a  class="movie-item" href="{{ url_for('anime_info', anime_name=name4) }}">
+                    <img src={{img4}} alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title" >
+                            {{name4}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score4}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur4}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud4}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat4}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a  class="movie-item" href="{{ url_for('anime_info', anime_name=name5) }}">
+                    <img src={{img5}} alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            {{name5}}
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>{{score5}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>{{dur5}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{stud5}}</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>{{rat5}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+
+
+            </div>
+        </div>
+    </div>
+    <!-- END LATEST SERIES SECTION -->
+
+
+
+
+    <!-- FOOTER SECTION -->
+    <footer class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-md-6 col-sm-12">
+                    <div class="content">
+                        <a href="#" class="logo">
+                            <i class='bx bx-movie-play bx-tada main-color'></i>Ota<span class="main-color">k</span>U
+                        </a>
+                        <p>
+                            For Anime Lovers From Anime Lovers.
+                        </p>
+                        <div class="social-list">
+                            <a href="https://github.com/VishalF5" class="social-item">
+                                <i class="bx bxl-github"></i>
+                            </a>
+                            <a href="#" class="social-item">
+                                <i class="bx bxl-instagram"></i>
+                            </a>
+                            <a href="https://www.kaggle.com/vishalmane10" class="social-item2">
+                                <i class="fab fa-kaggle"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/vishal-mane-236472222/" class="social-item2">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER SECTION -->
+
+    <!-- COPYRIGHT SECTION -->
+
+    <!-- END COPYRIGHT SECTION -->
+
+    <!-- SCRIPT -->
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- OWL CAROUSEL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <!-- APP SCRIPT -->
+    <script src="{{ url_for('static', filename='js/appnew1.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/autocomplete.js')}}"></script>
+
+
+
+</body>
+
+</html>
