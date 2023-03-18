@@ -58,6 +58,8 @@ def recommends():
                             name5=name5,score5=score5,stud5=stud5,rat5=rat5,dur5=dur5,img5=img5)
     except TypeError:
         return "Anime Not Found"
+
+
 @app.route("/anime_info/<anime_name>", methods=["POST","GET"])
 def anime_info(anime_name):
     name, img, score, syn, dur, stud, rat = suggestion(anime_name)
