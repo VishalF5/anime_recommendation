@@ -9,21 +9,22 @@
     <title>
         Otaku
     </title>
-    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
-    <!-- OWL CAROUSEL -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/css/autoComplete.min.css">
-<!--    main-->
    <link href="{{ url_for('static', filename='css/owl.carousel.min.css') }}" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- APP CSS -->
     <link href="{{ url_for('static', filename='css/grid.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/app1.css') }}" rel="stylesheet">
+    
+
     <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script type="text/javascript">
+
+    // Autocomplete
     var Anime = {{suggestions|tojson}};
   </script>
 </head>
@@ -289,23 +290,13 @@
             </div>
         </div>
     </footer>
-    <!-- END FOOTER SECTION -->
-
-    <!-- COPYRIGHT SECTION -->
-
-    <!-- END COPYRIGHT SECTION -->
-
-    <!-- SCRIPT -->
-    <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- OWL CAROUSEL -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
-    <!-- APP SCRIPT -->
+
+
     <script src="{{ url_for('static', filename='js/appnew1.js')}}"></script>
     <script src="{{ url_for('static', filename='js/autocomplete.js')}}"></script>
-
-
-
 </body>
 
 </html>
