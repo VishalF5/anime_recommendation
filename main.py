@@ -51,7 +51,7 @@ def hello_world():
 @app.route("/recommends", methods=["POST", "GET"])
 def recommends():
     try:
-        text = request.form["movie"]
+        text = request.form["anime_search"]
         names = similarity.get(text)
         name1 = names[0]
         name2 = names[1]
