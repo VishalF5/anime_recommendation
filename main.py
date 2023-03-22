@@ -19,11 +19,6 @@ except Exception as e:
 
 # mongodb function
 def suggestion(i):
-    # client = MongoClient(
-    #     "mongodb+srv://Vishal:Vishal22610@anime.7z766.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-    # db = client.get_database('Anime')
-    # records = db.Anime
-
     myquery = ({'Name': i})
     mydoc = db.Anime.find(myquery)
     for x in mydoc:
