@@ -1,4 +1,3 @@
-
 from flask import Flask, request, render_template
 import pickle
 from pymongo import MongoClient
@@ -32,6 +31,20 @@ def suggestion(i):
     rat = a.get('Rating')
     return name, img, score, syn, dur, stud, rat
 
+def home(i):
+    myquery = ({'Index': i})
+    mydoc = db.Anime.find(myquery)
+    for x in mydoc:
+        a = x
+    name = a.get('Name')
+    img = a.get('img_url')
+    score = a.get('Score')
+    syn = a.get('Synopsis')
+    dur = a.get('Duration')
+    stud = a.get('Studio')
+    rat = a.get('Rating')
+    return name, img, score, syn, dur, stud, rat
+
 
 # Flask App
 app = Flask(__name__)
@@ -40,7 +53,20 @@ app = Flask(__name__)
 # Home Route
 @app.route("/", methods=["POST", "GET"])
 def hello_world():
-    return render_template("index_django.html", suggestions=anime_names)
+    index=[2,1,0,3,4,5,6,7,8,9,66,388,2927,101,598,877,22,14,23,26,31,39,48,209,1076,67,787,448,284,371,926,614]
+    result_dict={}
+    result_dict = {}
+
+    for id in index:
+    # Call the home function and unpack the returned values into a list
+        value_list = list(home(id))
+        # Use the ID as the key and the value list as the corresponding value in the dictionary
+        result_dict[f"name{id}"] = value_list
+
+        print(result_dict)
+
+  
+    return render_template("index_django.html", suggestions=anime_names,dicts=result_dict)
 
 
 @app.route("/recommends", methods=["POST", "GET"])

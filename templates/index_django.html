@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,39 +67,39 @@
         <div class="hero-slide">
             <div class="owl-carousel carousel-nav-center" id="hero-carousel">
                 <!-- SLIDE ITEM -->
-                <div class="hero-slide-item"><a href ="{{ url_for('anime_info', anime_name='Fullmetal Alchemist: Brotherhood') }}">
-                    <img src='https://i.pinimg.com/originals/1b/c1/ce/1bc1cea18ed672c5a0038ea7c6a9072c.jpg' alt="" >
+                <div class="hero-slide-item">
+                    <img src='https://i.pinimg.com/originals/13/a1/01/13a10172127bbf9da50b8ce6db35eeaa.png' alt="" >
                     <div class="overlay"></div>
                     <div class="hero-slide-item-content">
                         <div class="item-content-wraper">
                         <div class="item-content-title top-down">
-                                "Fullmetal Alchemist: Brotherhood"
+                                {{dicts.name2[0]}}
                             </div>
                             <div class="movie-infos top-down delay-2">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>{{score1}}</span>
+                                    <span>{{dicts.name2[2]}}</span>
                                 </div>
                                 <div class="movie-info">
                                     <i class="bx bxs-time"></i>
-                                    <span>{{dur1}}</span>
+                                    <span>{{dicts.name2[4]}}</span>
                                 </div>
                                 <div class="movie-info">
-                                    <span>{{stud1}}</span>
+                                    <span>{{dicts.name2[5]}}</span>
                                 </div>
                                 <div class="movie-info">
-                                    <span>{{rat1}}</span>
+                                    <span>{{dicts.name2[6]}}</span>
                                 </div>
                             </div>
                             <div class="item-content-description top-down delay-4">
                                 
                             </div>
                             <div class="item-action top-down delay-6">
-                                <a href="#" class="btn btn-hover">
+                                <a href="{{ url_for('anime_info', anime_name=dicts.name2[0]) }}" class="btn btn-hover">
                                     <i class="bx bxs-right-arrow"></i>
-                                    <span>Watch now</span>
+                                    <span>See More</span>
                                 </a>
-                            </div></a>  
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -112,7 +111,7 @@
                     <div class="hero-slide-item-content">
                         <div class="item-content-wraper">
                             <div class="item-content-title top-down">
-                                {{name2}}
+                                {{dicts.name1[0]}}
                             </div>
                             <div class="movie-infos top-down delay-2">
                                 <div class="movie-info">
@@ -136,7 +135,7 @@
                             <div class="item-action top-down delay-6">
                                 <a href="#" class="btn btn-hover">
                                     <i class="bx bxs-right-arrow"></i>
-                                    <span>Watch now</span>
+                                    <span>See More</span>
                                 </a>
                             </div>
                         </div>
@@ -145,7 +144,7 @@
                 <!-- END SLIDE ITEM -->
                 <!-- SLIDE ITEM -->
                 <div class="hero-slide-item">
-                    <img src='https://i.pinimg.com/originals/13/a1/01/13a10172127bbf9da50b8ce6db35eeaa.png' alt="">
+                    <img src='https://i.pinimg.com/originals/1b/c1/ce/1bc1cea18ed672c5a0038ea7c6a9072c.jpg' alt="">
                     <div class="overlay"></div>
                     <div class="hero-slide-item-content">
                         <div class="item-content-wraper">
@@ -174,7 +173,7 @@
                             <div class="item-action top-down delay-6">
                                 <a href="#" class="btn btn-hover">
                                     <i class="bx bxs-right-arrow"></i>
-                                    <span>Watch now</span>
+                                    <span>See More</span>
                                 </a>
                             </div>
                         </div>
@@ -194,7 +193,7 @@
                     <img src="https://m.media-amazon.com/images/M/MV5BZjNmZDhkN2QtNDYyZC00YzJmLTg0ODUtN2FjNjhhMzE3ZmUxXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_FMjpg_UX1000_.jpg" alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title",name="movie" ,method='get', action='/anime'>
-                            HUNNTER x HUnter
+                            {{name4}}
                         </div>
                     
                         <div class="movie-infos">
@@ -967,7 +966,7 @@
                     <div class="item-action">
                         <a href="#" class="btn btn-hover">
                             <i class="bx bxs-right-arrow"></i>
-                            <span>Watch now</span>
+                            <span>See More</span>
                         </a>
                     </div>
                 </div>
