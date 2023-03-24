@@ -116,24 +116,24 @@
                             <div class="movie-infos top-down delay-2">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>{{score2}}</span>
+                                    <span>{{dicts.name1[2]}}</span>
                                 </div>
                                 <div class="movie-info">
                                     <i class="bx bxs-time"></i>
-                                    <span>{{dur2}}</span>
+                                    <span>{{dicts.name1[4]}}</span>
                                 </div>
                                 <div class="movie-info">
-                                    <span>{{stud2}}</span>
+                                    <span>{{dicts.name1[5]}}</span>
                                 </div>
                                 <div class="movie-info">
-                                    <span>{{rat2}}</span>
+                                    <span>{{dicts.name1[6]}}</span>
                                 </div>
                             </div>
                             <div class="item-content-description top-down delay-4">
                                
                             </div>
                             <div class="item-action top-down delay-6">
-                                <a href="#" class="btn btn-hover">
+                                <a href="{{ url_for('anime_info', anime_name=dicts.name1[0]) }}" class="btn btn-hover">
                                     <i class="bx bxs-right-arrow"></i>
                                     <span>See More</span>
                                 </a>
@@ -149,29 +149,29 @@
                     <div class="hero-slide-item-content">
                         <div class="item-content-wraper">
                             <div class="item-content-title top-down">
-                                {{name3}}
+                                {{dicts.name0[0]}}
                             </div>
                             <div class="movie-infos top-down delay-2">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>{{score3}}</span>
+                                    <span>{{dicts.name0[2]}}</span>
                                 </div>
                                 <div class="movie-info">
                                     <i class="bx bxs-time"></i>
-                                    <span>{{dur3}}</span>
+                                    <span>{{dicts.name0[4]}}</span>
                                 </div>
                                 <div class="movie-info">
-                                    <span>{{stud3}}</span>
+                                    <span>{{dicts.name0[5]}}</span>
                                 </div>
                                 <div class="movie-info">
-                                    <span>{{rat3}}</span>
+                                    <span>{{dicts.name0[6]}}</span>
                                 </div>
                             </div>
                             <div class="item-content-description top-down delay-4">
                                 
                             </div>
                             <div class="item-action top-down delay-6">
-                                <a href="#" class="btn btn-hover">
+                                <a href="{{ url_for('anime_info', anime_name=dicts.name0[0]) }}" class="btn btn-hover">
                                     <i class="bx bxs-right-arrow"></i>
                                     <span>See More</span>
                                 </a>
@@ -188,162 +188,169 @@
             <div class="owl-carousel" id="top-movies-slide">
                 <!-- MOVIE ITEM -->
                 <form method = "POST" action = "/anime",value='Click'>
-                   
+                    
                 <div class="movie-item", value='Click' >
+                    <a href="{{ url_for('anime_info', anime_name=dicts.name6[0]) }}">
                     <img src="https://m.media-amazon.com/images/M/MV5BZjNmZDhkN2QtNDYyZC00YzJmLTg0ODUtN2FjNjhhMzE3ZmUxXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_FMjpg_UX1000_.jpg" alt="">
                     <div class="movie-item-content">
+                        
                         <div class="movie-item-title",name="movie" ,method='get', action='/anime'>
-                            {{name4}}
+                            {{dicts.name6[0]}}
                         </div>
                     
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score4}}</span>
+                                <span>{{dicts.name6[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur4}}</span>
+                                <span>{{dicts.name6[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud4}}</span>
+                                <span>{{dicts.name6[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat4}}</span>
+                                <span>{{dicts.name6[6]}}</span>
                             </div>
                         </div>
-                    </div>
+                    </div></a>
                 </div>
             </form>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
                 <div class="movie-item">
+                    <a href="{{ url_for('anime_info', anime_name=dicts.name30[0]) }}">
                     <img src="https://s.yimg.com/ny/api/res/1.2/Tj9jWYcFwkNKDRmhUscnpw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTkwNQ--/https://s.yimg.com/os/creatr-uploaded-images/2021-09/adcad830-202a-11ec-bbf6-2fd2014631e0" alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name5}}
+                            {{dicts.name30[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score5}}</span>
+                                <span>{{dicts.name30[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur5}}</span>
+                                <span>{{dicts.name30[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud5}}</span>
+                                <span>{{dicts.name30[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat5}}</span>
+                                <span>{{dicts.name30[6]}}</span>
                             </div>
                         </div>
-                    </div>
+                    </div></a>
                 </div>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
                 <div class="movie-item">
+                    <a href="{{ url_for('anime_info', anime_name=dicts.name559[0]) }}">
                     <img src="https://flxt.tmsimg.com/assets/p186544_b_v8_ad.jpg" alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name6}}
+                            {{dicts.name559[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score6}}</span>
+                                <span>{{dicts.name559[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur6}}</span>
+                                <span>{{dicts.name559[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud6}}</span>
+                                <span>{{dicts.name559[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat6}}</span>
+                                <span>{{dicts.name559[6]}}</span>
                             </div>
                         </div>
-                    </div>
+                    </div></a>
                 </div>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
                 <div class="movie-item">
+                    <a href="{{ url_for('anime_info', anime_name=dicts.name41[0]) }}">
                     <img src="https://wallpapercave.com/wp/wp4585083.jpg" alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name7}}
+                            {{dicts.name41[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score7}}</span>
+                                <span>{{dicts.name41[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur7}}</span>
+                                <span>{{dicts.name41[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud7}}</span>
+                                <span>{{dicts.name41[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat7}}</span>
+                                <span>{{dicts.name41[6]}}</span>
                             </div>
                         </div>
-                    </div>
+                    </div></a>
                 </div>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
                 <div class="movie-item">
+                    <a href="{{ url_for('anime_info', anime_name=dicts.name121[0]) }}">
                     <img src="https://m.media-amazon.com/images/M/MV5BZmE1NjIyNjYtMTVmMy00M2YyLTljMjMtZGQwYmUxOTU4NjRlXkEyXkFqcGdeQXVyNjc3OTE4Nzk@._V1_.jpg" alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                           {{name8}}
+                           {{dicts.name121[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score8}}</span>
+                                <span>{{dicts.name121[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur8}}</span>
+                                <span>{{dicts.name121[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud8}}</span>
+                                <span>{{dicts.name121[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat8}}</span>
+                                <span>{{dicts.name121[6]}}</span>
                             </div>
                         </div>
-                    </div>
+                    </div></a>
                 </div>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
                 <div class="movie-item">
+                    <a href="{{ url_for('anime_info', anime_name=dicts.name126[0]) }}">
                     <img src="https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_FMjpg_UX1000_.jpg" alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name9}}
+                            {{dicts.name126[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score9}}</span>
+                                <span>{{dicts.name126[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur9}}</span>
+                                <span>{{dicts.name126[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud9}}</span>
+                                <span>{{dicts.name126[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat9}}</span>
+                                <span>{{dicts.name126[6]}}</span>
                             </div>
                         </div>
-                    </div>
+                    </div></a>
                 </div>
                 <!-- END MOVIE ITEM -->
             </div>
@@ -360,182 +367,182 @@
             </div>
             <div class="movies-slide carousel-nav-center owl-carousel">
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name66[0]) }}" class="movie-item">
                     <img src='https://m.media-amazon.com/images/M/MV5BODkzMjhjYTQtYmQyOS00NmZlLTg3Y2UtYjkzN2JkNmRjY2FhXkEyXkFqcGdeQXVyNTM4MDQ5MDc@._V1_FMjpg_UX1000_.jpg' alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name66}}
+                            {{dicts.name66[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score66}}</span>
+                                <span>{{dicts.name66[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur66}}</span>
+                                <span>{{dicts.name66[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud66}}</span>
+                                <span>{{dicts.name66[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat66}}</span>
+                                <span>{{dicts.name66[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
-                    <img src='https://animesonehd.xyz/wp-content/uploads/2020/02/jojo1.jpg' alt="">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name67[0]) }}" class="movie-item">
+                    <img src='https://cdn.animenewsnetwork.com/hotlink/thumbnails/max700x700/cms/news/102888/one-piece-zou-visual.jpeg' alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name388}}
+                            {{dicts.name67[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score388}}</span>
+                                <span>{{dicts.name67[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur388}}</span>
+                                <span>{{dicts.name67[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud388}}</span>
+                                <span>{{dicts.name67[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat388}}</span>
+                                <span>{{dicts.name67[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name2927[0]) }}" class="movie-item">
                     <img src='https://m.media-amazon.com/images/M/MV5BYjY4MDU2YjMtNzY1MC00ODg1LWIwMzYtMWE5YTA3YTI4ZjMxXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg' alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name2927}}
+                            {{dicts.name2927[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score2927}}</span>
+                                <span>{{dicts.name2927[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur2927}}</span>
+                                <span>{{dicts.name2927[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud2927}}</span>
+                                <span>{{dicts.name2927[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat26927}}</span>
+                                <span>{{dicts.name2927[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name101[0]) }}" class="movie-item">
                     <img src='https://cdn.europosters.eu/image/750/posters/one-punch-man-destruction-i61133.jpg' alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name101}}
+                            {{dicts.name101[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score101}}</span>
+                                <span>{{dicts.name101[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur101}}</span>
+                                <span>{{dicts.name101[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud101}}</span>
+                                <span>{{dicts.name101[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat101}}</span>
+                                <span>{{dicts.name101[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name598[0]) }}" class="movie-item">
                     <img src='https://m.media-amazon.com/images/M/MV5BNmQzYmE2MGEtZjk4YS00YmVjLWEwZWMtODRkMjc4MTM5N2I3XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg' alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name598}}
+                            {{dicts.name598[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score598}}</span>
+                                <span>{{dicts.name598[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur598}}</span>
+                                <span>{{dicts.name598[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud598}}</span>
+                                <span>{{dicts.name598[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat598}}</span>
+                                <span>{{dicts.name598[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name877[0]) }}" class="movie-item">
                     <img src='https://images-na.ssl-images-amazon.com/images/I/81mJp8ObCNL.jpg'alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name877}}
+                            {{dicts.name877[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score877}}</span>
+                                <span>{{dicts.name877[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur877}}</span>
+                                <span>{{dicts.name877[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud877}}</span>
+                                <span>{{dicts.name877[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat877}}</span>
+                                <span>{{dicts.name877[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name3[0]) }}" class="movie-item">
                     <img src='https://m.media-amazon.com/images/M/MV5BMjUxMzE4ZDctODNjMS00MzIwLThjNDktODkwYjc5YWU0MDc0XkEyXkFqcGdeQXVyNjc3OTE4Nzk@._V1_FMjpg_UX1000_.jpg' alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name22}}
+                            {{dicts.name3[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score22}}</span>
+                                <span>{{dicts.name3[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur22}}</span>
+                                <span>{{dicts.name3[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud22}}</span>
+                                <span>{{dicts.name3[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat22}}</span>
+                                <span>{{dicts.name3[6]}}</span>
                             </div>
                         </div>
                     </div>
@@ -554,182 +561,182 @@
             </div>
             <div class="movies-slide carousel-nav-center owl-carousel">
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name14[0]) }}" class="movie-item">
                     <img src='https://m.media-amazon.com/images/M/MV5BZGRkOGMxYTUtZTBhYS00NzI3LWEzMDQtOWRhMmNjNjJjMzM4XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg' alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name14}}
+                            {{dicts.name14[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score14}}</span>
+                                <span>{{dicts.name14[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur14}}</span>
+                                <span>{{dicts.name14[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud14}}</span>
+                                <span>{{dicts.name14[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat14}}</span>
+                                <span>{{dicts.name14[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name22[0]) }}" class="movie-item">
                     <img src='https://m.media-amazon.com/images/M/MV5BODRmZDVmNzUtZDA4ZC00NjhkLWI2M2UtN2M0ZDIzNDcxYThjL2ltYWdlXkEyXkFqcGdeQXVyNTk0MzMzODA@._V1_FMjpg_UX1000_.jpg' alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                           {{name23}}
+                           {{dicts.name22[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score23}}</span>
+                                <span>{{dicts.name22[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur23}}</span>
+                                <span>{{dicts.name22[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud23}}</span>
+                                <span>{{dicts.name22[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud23}}</span>
+                                <span>{{dicts.name22[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name62[0]) }}" class="movie-item">
                     <img src='https://m.media-amazon.com/images/M/MV5BOTg5ZjI5ZTAtOWE2OS00MjY4LWI4ZDQtMzEzMDY4MTgzYWJlXkEyXkFqcGdeQXVyNjc3OTE4Nzk@._V1_.jpg' alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name26}}
+                            {{dicts.name39[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score26}}</span>
+                                <span>{{dicts.name39[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur26}}</span>
+                                <span>{{dicts.name39[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud26}}</span>
+                                <span>{{dicts.name39[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat26}}</span>
+                                <span>{{dicts.name39[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name48[0]) }}" class="movie-item">
                     <img src='https://images-na.ssl-images-amazon.com/images/I/91Oojh0EQSS._RI_.jpg' alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name31}}
+                            {{dicts.name48[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score31}}</span>
+                                <span>{{dicts.name48[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur31}}</span>
+                                <span>{{dicts.name48[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud31}}</span>
+                                <span>{{dicts.name48[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat31}}</span>
+                                <span>{{dicts.name48[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name31[0]) }}" class="movie-item">
                     <img src='https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_360,c_scale/jackets/9781838719517.jpg' alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name39}}
+                            {{dicts.name31[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score39}}</span>
+                                <span>{{dicts.name31[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur39}}</span>
+                                <span>{{dicts.name31[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud39}}</span>
+                                <span>{{dicts.name31[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat39}}</span>
+                                <span>{{dicts.name31[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name60[0]) }}" class="movie-item">
                     <img src='https://m.media-amazon.com/images/M/MV5BNmM4YTFmMmItMGE3Yy00MmRkLTlmZGEtMzZlOTQzYjk3MzA2XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg' alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name48}}
+                            {{dicts.name60[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score48}}</span>
+                                <span>{{dicts.name60[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur48}}</span>
+                                <span>{{dicts.name60[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud48}}</span>
+                                <span>{{dicts.name60[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat48}}</span>
+                                <span>{{dicts.name60[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name209[0]) }}" class="movie-item">
                     <img src='https://akibamarket.com/wp-content/uploads/2020/06/tenki.jpg'alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                           {{name209}}
+                           {{dicts.name209[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score209}}</span>
+                                <span>{{dicts.name209[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur209}}</span>
+                                <span>{{dicts.name209[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud209}}</span>
+                                <span>{{dicts.name209[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat209}}</span>
+                                <span>{{dicts.name209[6]}}</span>
                             </div>
                         </div>
                     </div>
@@ -748,182 +755,182 @@
             </div>
             <div class="movies-slide carousel-nav-center owl-carousel">
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name1076[0]) }}" class="movie-item">
                     <img src="https://wallpapercave.com/wp/wp8936520.jpg" alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name1076}}
+                            {{dicts.name1076[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score1076}}</span>
+                                <span>{{dicts.name1076[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur1076}}</span>
+                                <span>{{dicts.name1076[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud1076}}</span>
+                                <span>{{dicts.name1076[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat1076}}</span>
+                                <span>{{dicts.name1076[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name67[0]) }}" class="movie-item">
                     <img src="https://i.pinimg.com/originals/79/4f/c6/794fc659b025e44256077d2751fe0cdd.jpg" alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name67}}
+                            {{dicts.name67[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score67}}</span>
+                                <span>{{dicts.name67[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur67}}</span>
+                                <span>{{dicts.name67[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud67}}</span>
+                                <span>{{dicts.name67[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat67}}</span>
+                                <span>{{dicts.name67[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name787[0]) }}" class="movie-item">
                     <img src="https://i.pinimg.com/originals/83/57/3b/83573b44349c706e933f32672cc65a9a.jpg" alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name787}}
+                            {{dicts.name787[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score787}}</span>
+                                <span>{{dicts.name787[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur787}}</span>
+                                <span>{{dicts.name787[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud787}}</span>
+                                <span>{{dicts.name787[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat787}}</span>
+                                <span>{{dicts.name787[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name448[0]) }}" class="movie-item">
                     <img src="https://m.media-amazon.com/images/M/MV5BNTAzYTlkMWEtOTNjZC00ZDU0LWI5ODUtYTRmYzY0MTAzYWZlXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_FMjpg_UX1000_.jpg" alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name448}}
+                            {{dicts.name448[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score448}}</span>
+                                <span>{{dicts.name448[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur448}}</span>
+                                <span>{{dicts.name448[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud448}}</span>
+                                <span>{{dicts.name448[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat448}}</span>
+                                <span>{{dicts.name448[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name284[0]) }}" class="movie-item">
                     <img src="https://www.themoviedb.org/t/p/original/vRh0o4eq5kAFDgc95u1HTcJNuAw.jpg" alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name284}}
+                            {{dicts.name284[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score284}}</span>
+                                <span>{{dicts.name284[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur284}}</span>
+                                <span>{{dicts.name284[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud284}}</span>
+                                <span>{{dicts.name284[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat284}}</span>
+                                <span>{{dicts.name284[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name371[0]) }}" class="movie-item">
                     <img src="https://m.media-amazon.com/images/M/MV5BMGMyOThiMGUtYmFmZi00YWM0LWJiM2QtZGMwM2Q2ODE4MzhhXkEyXkFqcGdeQXVyMjc2Nzg5OTQ@._V1_.jpg" alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name371}}
+                            {{dicts.name371[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score371}}</span>
+                                <span>{{dicts.name371[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur371}}</span>
+                                <span>{{dicts.name371[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud371}}</span>
+                                <span>{{dicts.name371[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat371}}</span>
+                                <span>{{dicts.name371[6]}}</span>
                             </div>
                         </div>
                     </div>
                 </a>
                 <!-- END MOVIE ITEM -->
                 <!-- MOVIE ITEM -->
-                <a href="#" class="movie-item">
+                <a href="{{ url_for('anime_info', anime_name=dicts.name926[0]) }}" class="movie-item">
                     <img src="https://m.media-amazon.com/images/M/MV5BY2IyMDA0NGEtZjIyOS00NjU0LThlOTctODA0OTZmMDU2ZTMxXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg" alt="">
                     <div class="movie-item-content">
                         <div class="movie-item-title">
-                            {{name926}}
+                            {{dicts.name926[0]}}
                         </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
-                                <span>{{score926}}</span>
+                                <span>{{dicts.name926[2]}}</span>
                             </div>
                             <div class="movie-info">
                                 <i class="bx bxs-time"></i>
-                                <span>{{dur926}}</span>
+                                <span>{{dicts.name926[4]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{stud926}}</span>
+                                <span>{{dicts.name926[5]}}</span>
                             </div>
                             <div class="movie-info">
-                                <span>{{rat926}}</span>
+                                <span>{{dicts.name926[6]}}</span>
                             </div>
                         </div>
                     </div>
@@ -942,29 +949,29 @@
             <div class="hero-slide-item-content">
                 <div class="item-content-wraper">
                     <div class="item-content-title">
-                        {{name614}}
+                        {{dicts.name614[0]}}
                     </div>
                     <div class="movie-infos">
                         <div class="movie-info">
                             <i class="bx bxs-star"></i>
-                            <span>{{score614}}</span>
+                            <span>{{dicts.name614[2]}}</span>
                         </div>
                         <div class="movie-info">
                             <i class="bx bxs-time"></i>
-                            <span>{{dur614}}</span>
+                            <span>{{dicts.name614[4]}}</span>
                         </div>
                         <div class="movie-info">
-                            <span>{{stud614}}</span>
+                            <span>{{dicts.name614[5]}}</span>
                         </div>
                         <div class="movie-info">
-                            <span>{{rat614}}</span>
+                            <span>{{dicts.name614[6]}}</span>
                         </div>
                     </div>
                     <div class="item-content-description">
                         
                     </div>
                     <div class="item-action">
-                        <a href="#" class="btn btn-hover">
+                        <a href="{{ url_for('anime_info', anime_name=dicts.name614[0]) }}" class="btn btn-hover">
                             <i class="bx bxs-right-arrow"></i>
                             <span>See More</span>
                         </a>
@@ -1004,7 +1011,7 @@
                     <div class="row">
                         <div class="col-3 col-md-6 col-sm-6">
                             <div class="content">
-                                <p><b>Flix</b></p>
+                                <p><b>Otaku</b></p>
                                 <ul class="footer-menu">
                                     <li><a href="#">About us</a></li>
                                     <li><a href="#">My profile</a></li>
