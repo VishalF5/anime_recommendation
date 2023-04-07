@@ -1,10 +1,10 @@
 from flask import Flask, request, render_template
-import pickle
+import pickle5
 from pymongo import MongoClient
 
 # pickle files
-similarity = pickle.load(open("similarity.pickle", "rb"))
-anime_names = pickle.load(open("name.pkl", "rb"))
+similarity = pickle5.load(open("similarity.pickle", "rb"))
+anime_names = pickle5.load(open("name.pkl", "rb"))
 
 
 # connect to the database
