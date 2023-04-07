@@ -3,3 +3,4 @@ pymongo[srv]
 pymongo
 click
 gunicorn
+pickle5
